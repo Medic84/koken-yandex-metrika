@@ -1,0 +1,40 @@
+{
+	"name": "Yandex Metrika",
+	"version": "1.0.0",
+	"description": "Add Yandex Metrika to any theme.",
+	"demo": "http://mgt-design.ru",
+	"author": {
+		"name": "Medic84",
+		"link": "https://typaknote.ru"
+	},
+
+	"koken_version_required": "0.2.0",
+
+	"data": {
+		"counter_id": {
+			"label": "Counter ID",
+			"info": "You can find your counter id info in settigs",
+			"type": "string",
+			"validation": {
+				"type": "regex",
+				"rule":	"^\\d{7,9}$",
+				"error_message": "Not a valid counter ID. It should be from 7 to 9 numbers"
+			}
+		},
+		"async_code": {
+			"label": "Asynchronous code",
+			"info": "Asynchronous code does not block or affect the download speed of your site's page.",
+			"type": "boolean"
+		},
+		"no_index": {
+			"label": "Do not index site",
+			"info": "The prohibition of the automatic sending of the pages of the site on which Metrica's counter is installed, for indexing Yandex.",
+			"type": "boolean"
+		},
+		"alternate_cdn": {
+			"label": "Alternate CDN",
+			"info": "Allows you to correctly take into account visits from regions where access to Yandex resources is limited. Using this option can reduce the speed of loading the counter code.",
+			"type": "boolean"
+		}
+	}
+}
